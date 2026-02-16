@@ -9,9 +9,9 @@ const PROJECT_ID = process.env.NEXT_PUBLIC_PROJECT_ID || 'piktag';
 const SITE_SKIN = process.env.NEXT_PUBLIC_SITE_SKIN || 'piktag';
 
 export default function DashboardSwitcher() {
-  const [features, setFeatures] = useState([]);
-  const [versions, setVersions] = useState([]);
-  const [feedbacks, setFeedbacks] = useState([]);
+  const [features, setFeatures] = useState<any[]>([]);
+  const [versions, setVersions] = useState<any[]>([]);
+  const [feedbacks, setFeedbacks] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedFeature, setSelectedFeature] = useState<string | null>(null);
   const [feedbackText, setFeedbackText] = useState('');
