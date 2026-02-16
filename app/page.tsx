@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
 import PiktagSkin from '@/components/skins/PiktagSkin';
 import DayinupSkin from '@/components/skins/DayinupSkin';
+import DeotengSkin from '@/components/skins/DeotengSkin';
 
 const PROJECT_ID = process.env.NEXT_PUBLIC_PROJECT_ID || 'piktag';
 const SITE_SKIN = process.env.NEXT_PUBLIC_SITE_SKIN || 'piktag';
@@ -126,6 +127,10 @@ export default function DashboardSwitcher() {
 
   if (SITE_SKIN === 'dayinup') {
     return <DayinupSkin {...skinProps} />;
+  }
+
+  if (SITE_SKIN === 'deoteng') {
+    return <DeotengSkin {...skinProps} />;
   }
 
   return <PiktagSkin {...skinProps} />;
