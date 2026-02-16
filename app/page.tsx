@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase';
 import PiktagSkin from '@/components/skins/PiktagSkin';
 import DayinupSkin from '@/components/skins/DayinupSkin';
 import DeotengSkin from '@/components/skins/DeotengSkin';
+import GathertaiwanSkin from '@/components/skins/GathertaiwanSkin';
 
 const PROJECT_ID = process.env.NEXT_PUBLIC_PROJECT_ID || 'piktag';
 const SITE_SKIN = process.env.NEXT_PUBLIC_SITE_SKIN || 'piktag';
@@ -131,6 +132,10 @@ export default function DashboardSwitcher() {
 
   if (SITE_SKIN === 'deoteng') {
     return <DeotengSkin {...skinProps} />;
+  }
+
+  if (SITE_SKIN === 'gathertaiwan') {
+    return <GathertaiwanSkin {...skinProps} />;
   }
 
   return <PiktagSkin {...skinProps} />;
